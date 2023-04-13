@@ -1,0 +1,18 @@
+[package]
+name = "client"
+version = "0.0.0"
+edition = "2021"
+authors = ["The Aurae Authors", "Kris Nóva <kris@nivenly.com>"]
+license = "Apache-2.0"
+
+[dependencies]
+anyhow = { workspace = true }
+macros = { package = "client-macros", path = "macros" }
+proto = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["fs", "rt-multi-thread"] }
+toml = "0.7.3"
+tonic = { workspace = true, features = ["tls"] }
+tower = "0.4.13"
+x509-certificate = "0.18.0"
